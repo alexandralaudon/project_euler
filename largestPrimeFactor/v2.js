@@ -19,13 +19,13 @@ var aPrime = function(testForPrime){
 var largestPrimeFactor = function(test){
   var endPoint = Math.round(test/2),
       primeFactor = 0,
-      oppositeNumber = 0;
+      matchingFactor = 0;
 
   for (var i = 2; i <= endPoint ; i++){
     if (test%i === 0){
-      oppositeNumber = test/i;
-      if (aPrime(oppositeNumber)){
-        primeFactor = oppositeNumber;
+      matchingFactor = test/i;
+      if (aPrime(matchingFactor)){
+        primeFactor = matchingFactor;
         break;
       }
     }
