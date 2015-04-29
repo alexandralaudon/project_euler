@@ -3,8 +3,7 @@ var largestPrimeFactor = function(test){
 
   for (var i = 2; i <= test ; i++){
     if (test%i === 0 && aPrime(test/i)){
-      primeFactor = test/i;
-      break;
+      return test/i;
     }
   }
 
