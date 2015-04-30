@@ -13,8 +13,8 @@ var largestPalindrome = function(){
   var palindromeNumber = 0;
   var potentialPalindrome = 1;
 
-  for (var i = 999; i >= 500 ; i--){
-    for (var j = 999; j >= 500 ; j--){
+  for (var i = 999; i >= 900 ; i--){
+    for (var j = 999; j >= 900 ; j--){
       potentialPalindrome = i*j;
       if (testPalindrome(potentialPalindrome) && potentialPalindrome > palindromeNumber){
         palindromeNumber = potentialPalindrome;
