@@ -18,7 +18,6 @@ var allSquares = function(maximum){
   var sumSquares = array.reduce(function(total, num){ return total + num*num }, 0);
   var squareSums = array.reduce(function(total, num){ return total + num }, 0);
   squareSums *= squareSums;
-  console.log(squareSums, " ", sumSquares);
   return squareSums - sumSquares;
 }
 
