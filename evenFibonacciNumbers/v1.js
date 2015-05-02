@@ -10,12 +10,6 @@
 //1 + 2 = 3
 //2 + 3 = 5
 //3 + 5 = 8
-//5 + 8 = 13
-//8 + 13 = 21
-//13 + 21 = 34
-//21 + 34 = 55
-//34 + 55 = 89
-//55 + 89 = 144
 
 var cannotExceed = 4000000;
 var x = 1,
@@ -24,7 +18,6 @@ var x = 1,
     evenSum = 0;
 
 while (y < cannotExceed) {
-  //console.log("x: ", x, "y: ", y, "i: ", i, "sum: ", evenSum);
   substitute = x + y;
   x = y;
   y = substitute;
@@ -32,4 +25,3 @@ while (y < cannotExceed) {
 };
 
 console.log(evenSum);
-//4613732
