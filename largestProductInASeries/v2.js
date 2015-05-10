@@ -14,7 +14,7 @@ var multiplyString = function(string){
   var i = 0,
       sum = 1;
   while(i < string.length){
-    sum *= string.charAt(i);
+    sum *= Number(string.charAt(i));
     i++;
   }
   return sum;
