@@ -14,7 +14,7 @@ var isPrime = function(number){
 };
 
 var countPrime = function(maximum){
-  var primeNumber = 0,
+  var primeNumber,
       count = 0,
       i = 2;
 
