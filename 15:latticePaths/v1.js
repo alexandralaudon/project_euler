@@ -18,26 +18,22 @@
 // 1 + 8 + 28+ 56+ 70+ 56+ 28+ 8 + 1
 
 var latticePaths = function (gridNumber) {
-  var count = 1;
-  var array = [1,1];
-  var newArray = [];
+  var count = 1,
+      row = [1,1],
+      adjustedArray = [];
 
   while (count < gridNumber*2) {
-
-    for (var i = 0; i < array.length-1; i++) {
-      newArray.push(array[i] + array[i+1]);
+    for (var i = 0; i < row.length-1; i++) {
+      adjustedArray.push(row[i] + row[i+1]);
     }
 
-    newArray.push(1);
-    newArray.unshift(1);
-    array = newArray;
-    newArray= [];
+    adjustedArray.push(1);
+    adjustedArray.unshift(1);
+    row = adjustedArray;
+    adjustedArray= [];
     count++;
-
-    console.log(array);
-
   }
-  return array[Math.floor(array.length/2)];
+  return row[Math.floor(row.length/2)];
 };
 
 console.log(latticePaths(20));
