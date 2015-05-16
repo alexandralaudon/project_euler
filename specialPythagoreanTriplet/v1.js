@@ -13,11 +13,11 @@
 // the loop to find must be 998 or smaller since a + b + c must equal 1000.
 
 var pythagoreanTriplet = function(input){
-  for (var a = 1; a < input-2 ; a++){
+  for (var a = 3; a < input-2 ; a++){
     for (var b = a+1; b < input-2 ; b++){
       for (var c = b+1; c < input-2 ; c++){
         if ((a*a + b*b === c*c) && (a + b + c === input)){
-              return a*b*c;
+          return a*b*c;
         }
       }
     }
