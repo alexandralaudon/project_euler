@@ -10,10 +10,11 @@ var wordRep = {
 var numbersWordFunction = function(numberToConvert){
   if (numberToConvert < 20) return wordRep["ones"][numberToConvert].length;
 
-  var num = numberToConvert;
-  var numArray = String(num).split('');
-  var firstDigit = Number(numArray[0]);
-  var word = numArray.length === 2 ? wordRep["tens"][firstDigit] : wordRep["ones"][firstDigit] + wordRep["hundreds"][numArray.length-1];
+  var num = numberToConvert,
+      numArray = String(num).split(''),
+      firstDigit = Number(numArray[0]),
+      word = numArray.length === 2 ? wordRep["tens"][firstDigit] : wordRep["ones"][firstDigit] + wordRep["hundreds"][numArray.length-1];
+
   num -= numArray.reduce(function(first, digit) {return first*10});
   if (numArray.length === 3 && num > 0) word += "and";
 
