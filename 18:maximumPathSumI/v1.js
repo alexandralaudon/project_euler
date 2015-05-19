@@ -22,13 +22,15 @@ var matrixPath = [
 
 
 var maximum = function(matrix) {
-  var filteredMatrix = matrix;
+  var filteredRow;
+
   for (var row = matrix.length-1; row > 0; row--){
+    filteredRow = matrix[row-1];
     for (var column = 0; column < matrix[row].length-1; column++){
-      filteredMatrix[row-1][column] += Math.max(matrix[row][column], matrix[row][column+1]);
+      filteredRow[column] += Math.max(matrix[row][column], matrix[row][column+1]);
     }
   }
-  return filteredMatrix[0][0];
+  return filteredRow[0];
 };
 
 console.log(maximum(matrixPath));
